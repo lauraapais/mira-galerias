@@ -238,7 +238,6 @@ header {
 
 
 /* Programa */
-
 .futureEventContainer {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -269,75 +268,83 @@ header {
 }
 
 
-.pastEventsContainer {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    column-gap: calc(var(--marginDesktop));
-    margin-top: var(--marginDesktop);
-}
-
 .search-header {
     grid-column: 6 / span 1;
 }
 
-.year-pastEvents-header {
-    grid-column: 8 / span 1;
-}
 
-.pastEvent {
-    margin-bottom: calc(var(--marginDesktop) * 4);
-    width: 80%;
-    cursor: pointer;
-}
-
-.pastEventsContainer_index .pastEvent {
-    grid-column: 5 / span 4;
-    display: flex;
-    justify-content: space-between;
-    gap: var(--marginDesktop);
-    margin-bottom: calc(var(--marginDesktop) / 3);
-}
-
-.pastEventsContainer_grid .pastEvent {
-    grid-column: span 2;
-    gap: var(--marginDesktop);
-}
-
-.pastEvent img {
-    width: 100%;
-}
-
-#gridAgenda,
-#indexAgenda {
-    cursor: pointer;
-}
-
-
-.agendaMode {
+.agendaMode{
     grid-column: 5 / span 1;
 }
 
-.agendaMode h1 {
+.agendaMode h1{
     position: absolute;
 }
 
-#gridAgenda-content,
-#indexAgenda-content {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-    width: calc(100% - var(--marginDesktop) * 2);
-    display: none;
+.year-pastEvents-header{
+    grid-column: 8 / span 1;
 }
 
-#gridAgenda-content.active,
-#indexAgenda-content.active {
-    opacity: 1;
+/*indexEvents*/
+.indexEvents .pastEvent{
+    grid-column: 5 / span 4;
+}
+
+.indexEvents  {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: calc(var(--marginDesktop))!important;
+    row-gap: calc(var(--marginDesktop) / 4)!important;
+  }
+  
+.indexEvents .pastEvents-info {
+    grid-column: 5 / span 4;
+  }
+
+  .indexEvents{
     position: relative;
-    display: block;
+  }
+  
+  .indexEvents .pastEvents-image {
+    grid-column: 1 / span 4;
+    position: absolute;
+    top: 0%; 
+    left: 0%; 
+    width: 100%; 
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
+  
+.indexEvents .pastEvent:hover .pastEvents-image {
+    opacity: 1;
+  }
+  
+  .indexEvents .pastEvents-image img {
+    width: 80%;
+    height: auto;
+  }
 
+  .indexEvents .pastEvents-info{
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .gridEvents .pastEvent{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: calc(var(--marginDesktop))!important;
+    grid-column: 5 / span 8;
+  }
 
+  /**/
+  .gridEvents  {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: calc(var(--marginDesktop))!important;
+  }
+  
+  
 
 /*About*/
 .aboutCarousel_Container {
@@ -646,9 +653,7 @@ footer div {
     }
 
     .pastEventsContainer_index .pastEvent {
-        grid-column: 1 / span 8;
-        justify-content: space-between;
-        gap: var(--marginDesktop);
+
         margin-bottom: calc(var(--marginDesktop) * 2);
     }
 
