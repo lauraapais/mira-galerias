@@ -250,6 +250,7 @@ header {
     flex-direction: column;
     gap: var(--marginDesktop);
     grid-column: span 2;
+    cursor:pointer;
 }
 
 .futureEvent img {
@@ -285,7 +286,8 @@ header {
 
 .pastEvent {
     margin-bottom: calc(var(--marginDesktop) * 4);
-    width: 80%
+    width: 80%;
+    cursor: pointer;
 }
 
 .pastEventsContainer_index .pastEvent {
@@ -655,7 +657,7 @@ footer div {
     }
 
     .agendaMode {
-        grid-column: 1 / span 4;
+        grid-column: 1 / span 3;
     }
 
     .search-header{
