@@ -305,7 +305,6 @@ cursor: pointer;
 #gridAgenda-content, #indexAgenda-content {
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
-    position: absolute;
     width: calc(100% - var(--marginDesktop) * 2);
     display: none;
 }
@@ -559,8 +558,8 @@ footer div{
         grid-column: span 4;
     }
     
-    .headerLogo svg{
-        width: 60%;
+    .headerLogo svg {
+        width: 70%;
     }
 
     .headerContainer_programa .navBar{
@@ -589,6 +588,27 @@ footer div{
         grid-column: span 8;
     }
 
+    /*Programa*/
+    .futureEvent:first-child{
+        display: none;
+    }
+
+    .futureEvent {
+        grid-column: span 8;
+        flex-direction: column-reverse;
+       
+    }
+
+    .futureEventContainer{
+        grid-gap: calc(var(--marginDesktop) * 4);
+    }
+
+    .pastEventsContainer_index .pastEvent {
+        grid-column: 1 / span 8;
+        justify-content: space-between;
+        gap: var(--marginDesktop);
+        margin-bottom: calc(var(--marginDesktop) / 3);
+    }
     /*Footer*/
     footer div{
         grid-column: span 8;
