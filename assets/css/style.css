@@ -748,6 +748,7 @@ footer div {
 
     .eventsHeader {
         margin-top: calc(var(--marginDesktop) * 15);
+        margin-bottom: calc(var(--marginDesktop) * 4);
     }
 
     /**/
@@ -777,14 +778,9 @@ footer div {
     }
 
     .gridEvents .pastEvent {
-        margin-top: calc(var(--marginDesktop) * 4);
-    }
-
-    .gridEvents .pastEvent{
+        margin-bottom: calc(var(--marginDesktop) * 4);
         grid-column: span 7;
     }
-
-
 
     .gridEvents.pastEvents-image img {
         width: 100%;
