@@ -70,6 +70,15 @@ main {
     grid-gap: calc(var(--marginDesktop));
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: var(--bg-color);
+    background: var(--black);
+  }
+  
+  ::selection {
+    color: var(--bg-color);
+    background: var(--black);
+  }
 
 
 /* Header */
@@ -222,9 +231,26 @@ header {
     flex-direction: row;
     gap: var(--marginDesktop);
     overflow-x: auto;
-    /* Enable horizontal scrolling */
     grid-column: 3 / span 8;
 }
+
+.allEventsIndex::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: calc(var(--marginDesktop) / 2); /* Height of the scrollbar */
+    background-color: transparent; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Round corners */
+}
+
+.allEventsIndex::-webkit-scrollbar-thumb {
+    background-color: #E2E2E2; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round corners */
+}
+
+.allEventsIndex::-webkit-scrollbar-thumb:hover {
+    background-color: #E2E2E2; /* Color of the scrollbar thumb on hover */
+}
+
+  
 
 .eventIndex-container {
     overflow-x: auto;
@@ -232,7 +258,7 @@ header {
 }
 
 .eventsIndex-info {
-    margin-bottom: var(--marginDesktop);
+    margin-bottom: calc(var(--marginDesktop) * 1.5);
 }
 
 
@@ -368,6 +394,12 @@ header {
   .pastEvents-image img{
     width:90%;
   }
+
+
+
+
+  
+  
 
  
 
