@@ -550,20 +550,19 @@ header {
 
 .imageArchive {
     margin-top: calc(var(--marginDesktop)* 4);
+
 }
 
-.imageArchive-1 img:first-child {
-    grid-column: 3 / span 2;
-}
 
+
+/* As primeiras 3 imagens */
 .imageArchive img {
-    width: 90%;
     grid-column: span 2;
+    width:100%;
 }
 
-.imageArchive-2 img:last-child {
-    grid-column: 6 / span 2;
-}
+
+
 
 .galeria,
 .imageOpen,
@@ -651,19 +650,40 @@ footer div {
     p {
         font-size: calc(13px + 0.390625vw);
         line-height: calc(17px + 0.390625vw);
-        text-transform: uppercase;
         font-family: "soleil", sans-serif;
         font-weight: 500;
         font-style: normal;
     }
 
     /*Header*/
-    .headerLogo {
+    .headerContainer_index .headerLogo {
         grid-column: span 4;
     }
 
-    .headerLogo svg {
+    .headerContainer_programa  .headerLogo {
+        grid-column: span 4;
+    }
+
+    .headerContainer_sobre  .headerLogo {
+        grid-column: span 4;
+    }
+
+    .headerContainer_programa  svg {
         width: 70%;
+    }
+
+    .headerContainer_sobre  svg {
+        width: 70%;
+    }
+
+    .headerContainer_index .headerLogo svg {
+        width: 70%;
+    }
+
+     .navBar {
+        justify-content: flex-end;
+        gap: calc(var(--marginDesktop) * 4);
+        grid-column: 5 / span 4;
     }
 
     .headerContainer_programa .navBar {
@@ -672,9 +692,13 @@ footer div {
         grid-column: 5 / span 4;
     }
 
+    .headerContainer_sobre .navBar {
+        justify-content: flex-end;
+        gap: calc(var(--marginDesktop) * 4);
+        grid-column: 5 / span 4;
+    }
 
-
-    .navBar {
+    .headerContainer_index .navBar{
         grid-column: 5 / span 4;
     }
 
@@ -785,6 +809,21 @@ footer div {
     .gridEvents.pastEvents-image img {
         width: 100%;
     }
+
+    /*Evento-tipo*/
+    .firstInfoAbout{
+        margin-bottom: calc(var(--marginDesktop) * 4);
+    }
+
+    .eventTypeInfo_container {
+        grid-column: 1 / span 8;
+    }
+
+    .infoAbout_Container{
+        margin-top: calc(var(--marginDesktop) * 8);
+    }
+
+  
 
     /*Footer*/
     footer div {
