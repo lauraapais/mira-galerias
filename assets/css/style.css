@@ -70,15 +70,16 @@ main {
     grid-gap: calc(var(--marginDesktop));
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+    /* Code for Firefox */
     color: var(--bg-color);
     background: var(--black);
-  }
-  
-  ::selection {
+}
+
+::selection {
     color: var(--bg-color);
     background: var(--black);
-  }
+}
 
 
 /* Header */
@@ -235,22 +236,29 @@ header {
 }
 
 .allEventsIndex::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-    height: calc(var(--marginDesktop) / 2); /* Height of the scrollbar */
-    background-color: transparent; /* Background color of the scrollbar track */
-    border-radius: 10px; /* Round corners */
+    width: 12px;
+    /* Width of the scrollbar */
+    height: calc(var(--marginDesktop) / 2);
+    /* Height of the scrollbar */
+    background-color: transparent;
+    /* Background color of the scrollbar track */
+    border-radius: 10px;
+    /* Round corners */
 }
 
 .allEventsIndex::-webkit-scrollbar-thumb {
-    background-color: #E2E2E2; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Round corners */
+    background-color: #E2E2E2;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Round corners */
 }
 
 .allEventsIndex::-webkit-scrollbar-thumb:hover {
-    background-color: #E2E2E2; /* Color of the scrollbar thumb on hover */
+    background-color: #E2E2E2;
+    /* Color of the scrollbar thumb on hover */
 }
 
-  
+
 
 .eventIndex-container {
     overflow-x: auto;
@@ -275,7 +283,7 @@ header {
     flex-direction: column;
     gap: var(--marginDesktop);
     grid-column: span 2;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .futureEvent img {
@@ -299,111 +307,112 @@ header {
 }
 
 
-.agendaMode{
+.agendaMode {
     grid-column: 5 / span 1;
 }
 
-.agendaMode h1{
+.agendaMode h1 {
     position: absolute;
 }
 
-.year-pastEvents-header{
+.year-pastEvents-header {
     grid-column: 8 / span 1;
 }
 
-.content-wrapper{
+.content-wrapper {
     margin-top: var(--marginDesktop);
-  }
+}
 
 /*indexEvents*/
 #indexAgenda {
     display: none;
     cursor: pointer;
-  }
-  
+}
 
-.indexEvents .pastEvent{
+
+.indexEvents .pastEvent {
     grid-column: 5 / span 4;
     cursor: pointer;
 }
 
-.indexEvents  {
+.indexEvents {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: calc(var(--marginDesktop))!important;
-    row-gap: calc(var(--marginDesktop) / 4)!important;
-  }
-  
+    grid-gap: calc(var(--marginDesktop)) !important;
+    row-gap: calc(var(--marginDesktop) / 4) !important;
+}
+
 .indexEvents .pastEvents-info {
     grid-column: 5 / span 4;
-  }
+}
 
-  .indexEvents{
+.indexEvents {
     position: relative;
-  }
-  
-  .indexEvents .pastEvents-image {
+}
+
+.indexEvents .pastEvents-image {
     grid-column: 1 / span 4;
     position: absolute;
-    top: 0%; 
-    left: 50%; 
-    width: 100%; 
+    top: 0%;
+    left: 50%;
+    width: 100%;
     height: 100%;
     opacity: 0;
     transform: translateX(-50%);
     transition: opacity 0.3s ease;
 }
-  
+
 .indexEvents .pastEvent:hover .pastEvents-image {
     opacity: 1;
-  }
-  
-  .indexEvents .pastEvents-image img {
+}
+
+.indexEvents .pastEvents-image img {
     height: 100%;
     width: auto;
-  }
+}
 
-  .indexEvents .pastEvents-info{
+.indexEvents .pastEvents-info {
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  /**/
-#gridAgenda{
+/**/
+#gridAgenda {
     cursor: pointer;
 }
-  .gridEvents{
+
+.gridEvents {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: calc(var(--marginDesktop))!important;
+    grid-gap: calc(var(--marginDesktop)) !important;
     grid-column: 5 / span 8;
-  }
+}
 
-  .gridEvents .pastEvent:first-child {
+.gridEvents .pastEvent:first-child {
     grid-column: 3 / span 2;
 }
 
-  .gridEvents .pastEvent {
+.gridEvents .pastEvent {
     cursor: pointer;
     grid-column: span 2;
     display: flex;
     flex-direction: column;
     gap: calc(var(--marginDesktop) / 2) !important;
-  }
+}
 
-  .pastEvents-image img{
-    width:90%;
-  }
-
-
+.pastEvents-image img {
+    width: 90%;
+}
 
 
-  
-  
 
- 
 
-  
+
+
+
+
+
+
 
 
 /*About*/
@@ -703,8 +712,8 @@ footer div {
         width: 100%;
     }
 
-    .pastEvent{
-        gap:0 !important;
+    .pastEvent {
+        gap: 0 !important;
     }
 
     .pastEventsContainer_index .pastEvent {
@@ -725,20 +734,16 @@ footer div {
         grid-column: 1 / span 3;
     }
 
-    .search-header{
+    .search-header {
         grid-column: 5 / span 2;
     }
 
-    .year-pastEvents-header{
+    .year-pastEvents-header {
         grid-column: 7 / span 2;
     }
 
-    .content-wrapper{
+    .content-wrapper {
         margin-top: 0;
-    }
-
-    .pastEventsContainer_index .pastEvent{
-        margin-top: calc(var(--marginDesktop) * 4);
     }
 
     .eventsHeader {
@@ -747,11 +752,11 @@ footer div {
 
     /**/
 
-    .indexEvents .pastEvents-image{
+    .indexEvents .pastEvents-image {
         display: none;
     }
 
-    .indexEvents .pastEvent{
+    .indexEvents .pastEvent {
         grid-column: 1 / span 8;
     }
 
@@ -760,16 +765,21 @@ footer div {
     }
 
     /**/
-        .gridEvents .pastEventsContainer .pastEvent:nth-child(odd) {
-          grid-column: 1 / span 7;
-        }
-        .gridEvents .pastEventsContainer .pastEvent:nth-child(even) {
-          grid-column: 2 / span 7;
-        }
-      
-      
+    .gridEvents .pastEventsContainer .pastEvent:nth-child(odd) {
+        grid-column: 1 / span 7;
+    }
 
-    .pastEvents-image img{
+    .gridEvents .pastEventsContainer .pastEvent:nth-child(even) {
+        grid-column: 2 / span 7;
+    }
+
+    .gridEvents .pastEvent {
+        margin-top: calc(var(--marginDesktop) * 4);
+    }
+
+
+
+    .gridEvents.pastEvents-image img {
         width: 100%;
     }
 
