@@ -760,10 +760,10 @@ footer div {
     }
 
     /**/
-        .pastEventsContainer .pastEvent:nth-child(odd) {
+        .gridEvents .pastEventsContainer .pastEvent:nth-child(odd) {
           grid-column: 1 / span 7;
         }
-        .pastEventsContainer .pastEvent:nth-child(even) {
+        .gridEvents .pastEventsContainer .pastEvent:nth-child(even) {
           grid-column: 2 / span 7;
         }
       
