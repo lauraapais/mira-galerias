@@ -765,16 +765,23 @@ footer div {
     }
 
     /**/
-    .gridEvents .pastEventsContainer .pastEvent:nth-child(odd) {
+    .gridEvents .pastEvent:first-child{
+        grid-column: 1 / span 7;
+    }
+    .gridEvents.pastEvent:nth-child(odd) {
         grid-column: 1 / span 7;
     }
 
-    .gridEvents .pastEventsContainer .pastEvent:nth-child(even) {
+    .gridEvents .pastEvent:nth-child(even) {
         grid-column: 2 / span 7;
     }
 
     .gridEvents .pastEvent {
         margin-top: calc(var(--marginDesktop) * 4);
+    }
+
+    .gridEvents .pastEvent{
+        grid-column: span 7;
     }
 
 
