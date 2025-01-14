@@ -201,7 +201,8 @@ header {
 }
 
 .eventIndex-container::-webkit-scrollbar {
-    display: none; /* This hides the scrollbar for Webkit browsers (Chrome, Safari) */
+    display: none;
+    /* This hides the scrollbar for Webkit browsers (Chrome, Safari) */
 }
 
 .allEventsIndex {
@@ -462,7 +463,7 @@ header {
 
 .infoAbout_Team div {
     display: flex;
-    margin: calc(var(--marginDesktop) / 2) 0;
+    margin: calc(0.5vw) 0;
 }
 
 .infoAbout_Team .firstInfoAbout {

@@ -1,4 +1,4 @@
-const carousel = document.querySelector('.aboutCarousel');
+/*const carousel = document.querySelector('.aboutCarousel');
 const images = document.querySelectorAll('.aboutCarousel img');
 const nextButton = document.querySelector('.nextButton');
 const backButton = document.querySelector('.backButton');
@@ -60,3 +60,4 @@ backButton.addEventListener('click', function () {
 
 // Initialize with the first image in focus and button states
 updateCarousel(currentIndex);
+*/
