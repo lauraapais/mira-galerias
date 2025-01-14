@@ -184,7 +184,7 @@ header {
 }
 
 .eventsIndex-image {
-    width: max-content;
+    width: calc(100vw - var(--marginDesktop)* 4);
     height: 50vh;
     margin-bottom: calc(var(--marginDesktop) / 2);
 }
@@ -819,6 +819,20 @@ footer div {
     .indexEvents .pastEvents-info {
         flex-direction: column;
     }
+
+    .indexArrow{
+        width: calc(100vw - var(--marginDesktop) * 4);
+    }
+
+    .indexArrow svg {
+        width: 7vw;
+    }
+
+    .eventsIndex-info svg {
+        width: 25vw;
+    }
+    
+    
 
     /**/
     .gridEvents .pastEvent:first-child {
