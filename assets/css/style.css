@@ -185,7 +185,7 @@ header {
 
 .eventsIndex-image {
     width: calc(100vw - var(--marginDesktop)* 4);
-    height: 50vh;
+    height: 60vh;
     margin-bottom: calc(var(--marginDesktop) / 2);
 }
 
@@ -363,6 +363,8 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 /**/
 #gridAgenda {
@@ -547,8 +549,6 @@ header {
     margin-top: calc(var(--marginDesktop)* 1.5);
 
 }
-
-
 
 .imageArchive img.behavior1:nth-child(3n+1),
 .imageArchive img.behavior1:nth-child(3n+2),
@@ -836,6 +836,11 @@ footer div {
     
     .eventsIndex-image {
         margin-bottom: calc(var(--marginDesktop) * 2);
+    }
+
+
+    .allEventsIndex {
+        gap: calc(var(--marginDesktop) * 2);
     }
     
 
