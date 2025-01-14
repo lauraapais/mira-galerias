@@ -220,7 +220,7 @@ header {
 
 .eventsIndex-info svg {
     width: 6.5vw;
-    fill: var(--black) !important;
+    fill: var(--black);
 }
 
 .allEventsIndex {
