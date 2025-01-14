@@ -202,7 +202,6 @@ header {
 
 .eventIndex-container::-webkit-scrollbar {
     display: none;
-    /* This hides the scrollbar for Webkit browsers (Chrome, Safari) */
 }
 
 .allEventsIndex {
@@ -238,9 +237,8 @@ header {
     width: calc(100vw - var(--marginDesktop) * 2);
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-x: hidden;
 }
-
 
 .indexArrow svg {
     width: 2vw;
