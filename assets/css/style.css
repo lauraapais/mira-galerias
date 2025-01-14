@@ -229,11 +229,18 @@ header {
 }
 
 .indexArrow {
-    position: fixed;
     width: calc(100vw - var(--marginDesktop)* 2);
     display: flex;
     justify-content: space-between;
 }
+
+.indexArrow {
+    width: calc(100vw - var(--marginDesktop) * 2);
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
 
 .indexArrow svg {
     width: 2vw;
@@ -500,8 +507,6 @@ header {
 .eventTypeImage_container img {
     width: 100%
 }
-
-.eventTypeInfo_container svg {}
 
 .eventTypeInfo {
     grid-column: span 2;
