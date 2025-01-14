@@ -184,8 +184,8 @@ header {
 }
 
 .eventsIndex-image {
-    width: calc(100vw - var(--marginDesktop)* 4);
-    height: 60vh;
+    width: max-content;
+    height: 50vh;
     margin-bottom: calc(var(--marginDesktop) / 2);
 }
 
@@ -355,7 +355,7 @@ header {
 }
 
 .indexEvents .pastEvents-image img {
-    height: 40vh;
+    height: 100%;
     width: auto;
 }
 
@@ -363,8 +363,6 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
-
 
 /**/
 #gridAgenda {
@@ -549,6 +547,8 @@ header {
     margin-top: calc(var(--marginDesktop)* 1.5);
 
 }
+
+
 
 .imageArchive img.behavior1:nth-child(3n+1),
 .imageArchive img.behavior1:nth-child(3n+2),
@@ -819,30 +819,6 @@ footer div {
     .indexEvents .pastEvents-info {
         flex-direction: column;
     }
-
-    .indexArrow {
-        width: calc(100vw - var(--marginDesktop)* 4);
-        position: absolute;
-        bottom: calc(var(--marginDesktop)* 2);
-    }
-
-    .indexArrow svg {
-        width: 7vw;
-    }
-
-    .eventsIndex-info svg {
-        width: 25vw;
-    }
-    
-    .eventsIndex-image {
-        margin-bottom: calc(var(--marginDesktop) * 2);
-    }
-
-
-    .allEventsIndex {
-        gap: calc(var(--marginDesktop) * 2);
-    }
-    
 
     /**/
     .gridEvents .pastEvent:first-child {
