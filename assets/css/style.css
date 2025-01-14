@@ -820,8 +820,10 @@ footer div {
         flex-direction: column;
     }
 
-    .indexArrow{
-        width: calc(100vw - var(--marginDesktop) * 4);
+    .indexArrow {
+        width: calc(100vw - var(--marginDesktop)* 4);
+        position: absolute;
+        bottom: calc(var(--marginDesktop)* 2);
     }
 
     .indexArrow svg {
@@ -832,6 +834,9 @@ footer div {
         width: 25vw;
     }
     
+    .eventsIndex-image {
+        margin-bottom: calc(var(--marginDesktop) * 2);
+    }
     
 
     /**/
