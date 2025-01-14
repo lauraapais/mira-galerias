@@ -4,7 +4,7 @@
     --black: #000000;
     --grey: #7C7C7C;
 
-    --marginDesktop: 1vw;
+    --marginDesktop: 2vw;
 }
 
 /* Geral */
@@ -60,8 +60,8 @@ a {
 
 main {
     min-height: 88vh;
-    margin-top: calc(var(--marginDesktop) * 4);
-    margin-bottom: calc(var(--marginDesktop) * 4);
+    margin-top: calc(var(--marginDesktop) * 2);
+    margin-bottom: calc(var(--marginDesktop) * 2);
 }
 
 .grid {
@@ -88,7 +88,8 @@ main {
 }
 
 .headerLogo svg {
-    width: 40%;
+    width: 36%;
+    fill: var(--red);
 }
 
 header {
@@ -111,9 +112,6 @@ header {
     gap: calc(var(--marginDesktop));
 }
 
-.headerContainer_programa svg {
-    fill: var(--black);
-}
 
 .headerContainer_programa .navBar {
     grid-column: 3 / span 6;
@@ -140,38 +138,7 @@ header {
     left: var(--marginDesktop);
 }
 
-.imageSlider {
-    height: 50vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.imageSlider img {
-    height: 80%;
-    filter: blur(15px);
-    position: absolute;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.imageSlider img.selected {
-    height: 100%;
-    filter: blur(0px);
-    transform: translateX(0);
-    z-index: 1;
-}
-
-.imageSlider img.left {
-    transform: translateX(-150%);
-}
-
-.imageSlider img.right {
-    transform: translateX(150%);
-}
 
 .carouselIndex_icon {
     position: absolute;
@@ -202,23 +169,24 @@ header {
     transition: all 0.3s ease;
 }
 
+
+
+
 /*INDEX 2*/
-.headerInfoIndex {
-    margin-bottom: var(--marginDesktop);
+.imageSlider {
+    display: flex;
+    gap: calc(var(--marginDesktop) / 2);
+    justify-content: center;
 }
 
-.headerInfoIndex h1:first-child {
-    grid-column: 1 / span 2;
-}
-
-.eventIndex {
-    flex: 0 0 calc(((100vw - var(--marginDesktop)) / 10) * 2);
+.imageSlider img {
+    height: 60vh;
 }
 
 .eventsIndex-image {
-    width: 100%;
-    height: 65vh;
-    margin-bottom: var(--marginDesktop);
+    width: max-content;
+    height: 50vh;
+    margin-bottom: calc(var(--marginDesktop) / 2);
 }
 
 .eventsIndex-image img {
@@ -227,47 +195,56 @@ header {
     object-fit: cover;
 }
 
+.eventIndex-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.eventIndex-container::-webkit-scrollbar {
+    display: none; /* This hides the scrollbar for Webkit browsers (Chrome, Safari) */
+}
+
 .allEventsIndex {
     display: flex;
     flex-direction: row;
-    gap: var(--marginDesktop);
-    overflow-x: auto;
-    grid-column: 3 / span 8;
+    gap: calc(var(--marginDesktop) / 2);
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.5s ease;
 }
 
-.allEventsIndex::-webkit-scrollbar {
-    width: 12px;
-    /* Width of the scrollbar */
-    height: calc(var(--marginDesktop) / 2);
-    /* Height of the scrollbar */
-    background-color: transparent;
-    /* Background color of the scrollbar track */
-    border-radius: 10px;
-    /* Round corners */
-}
-
-.allEventsIndex::-webkit-scrollbar-thumb {
-    background-color: #E2E2E2;
-    /* Color of the scrollbar thumb */
-    border-radius: 10px;
-    /* Round corners */
-}
-
-.allEventsIndex::-webkit-scrollbar-thumb:hover {
-    background-color: #E2E2E2;
-    /* Color of the scrollbar thumb on hover */
-}
-
-
-
-.eventIndex-container {
-    overflow-x: auto;
-    /* Ensure the container allows horizontal scrolling */
-}
 
 .eventsIndex-info {
     margin-bottom: calc(var(--marginDesktop) * 1.5);
 }
+
+.eventsIndex-info svg {
+    width: 6.5vw;
+}
+
+.allEventsIndex {
+    padding: 0;
+    margin: 0;
+}
+
+.indexArrow {
+    position: fixed;
+    width: calc(100vw - var(--marginDesktop)* 2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.indexArrow svg {
+    width: 2vw;
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 7.84px;
+}
+
+
+
+
 
 
 
@@ -294,7 +271,7 @@ header {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: calc(var(--marginDesktop));
-    margin-top: calc(var(--marginDesktop) * 6);
+    margin-top: calc(var(--marginDesktop) * 4);
 }
 
 .pastEvents-header {
@@ -360,6 +337,8 @@ header {
     opacity: 0;
     transform: translateX(-50%);
     transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center
 }
 
 .indexEvents .pastEvent:hover .pastEvents-image {
@@ -427,18 +406,21 @@ header {
 .aboutCarousel {
     grid-column: 3 / span 6;
     display: flex;
-    gap: calc(var(--marginDesktop));
+    gap: calc(var(--marginDesktop) / 2);
     transition: transform 0.5s ease-in-out;
+    height: 70vh;
 }
 
 .aboutCarousel img {
-    height: 85vh;
+    height: 100%;
+    width: fit-content;
 }
+
 
 .nextButton,
 .backButton {
     cursor: pointer;
-    height: 85vh;
+    height: 100%;
     background: transparent;
     position: absolute;
     top: 0;
@@ -458,7 +440,7 @@ header {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     column-gap: calc(var(--marginDesktop));
-    margin-top: calc(var(--marginDesktop) * 4);
+    margin-top: calc(var(--marginDesktop) * 2);
 }
 
 .infoAbout_Container h1 {
@@ -506,6 +488,10 @@ header {
     grid-column: 3 / span 2;
 }
 
+.eventTypeInfo_container svg {
+    width: 6.5vw;
+}
+
 .eventTypeImage_container {
     grid-column: 5 / span 4;
 }
@@ -513,6 +499,8 @@ header {
 .eventTypeImage_container img {
     width: 100%
 }
+
+.eventTypeInfo_container svg {}
 
 .eventTypeInfo {
     grid-column: span 2;
@@ -545,12 +533,34 @@ header {
 }
 
 .imageArchiveTitle {
-    margin-top: calc(var(--marginDesktop)* 8);
+    margin-top: calc(var(--marginDesktop)* 6);
 }
 
 .imageArchive {
-    margin-top: calc(var(--marginDesktop)* 4);
+    margin-top: calc(var(--marginDesktop)* 1.5);
 
+}
+
+
+
+.imageArchive img.behavior1:nth-child(3n+1),
+.imageArchive img.behavior1:nth-child(3n+2),
+.imageArchive img.behavior1:nth-child(3n+3) {
+    grid-column: span 2;
+}
+
+.imageArchive img.behavior1:nth-child(3n+1) {
+    grid-column: 3 / span 2;
+}
+
+.imageArchive img.behavior2:nth-child(3n+1),
+.imageArchive img.behavior2:nth-child(3n+2),
+.imageArchive img.behavior2:nth-child(3n+3) {
+    grid-column: span 2;
+}
+
+.imageArchive img.behavior2:nth-child(3n+3) {
+    grid-column: 6 / span 2;
 }
 
 
@@ -558,11 +568,8 @@ header {
 /* As primeiras 3 imagens */
 .imageArchive img {
     grid-column: span 2;
-    width:100%;
+    width: 100%;
 }
-
-
-
 
 .galeria,
 .imageOpen,
@@ -655,24 +662,28 @@ footer div {
         font-style: normal;
     }
 
+    main {
+        margin-top: calc(var(--marginDesktop)* 6);
+    }
+
     /*Header*/
     .headerContainer_index .headerLogo {
         grid-column: span 4;
     }
 
-    .headerContainer_programa  .headerLogo {
+    .headerContainer_programa .headerLogo {
         grid-column: span 4;
     }
 
-    .headerContainer_sobre  .headerLogo {
+    .headerContainer_sobre .headerLogo {
         grid-column: span 4;
     }
 
-    .headerContainer_programa  svg {
+    .headerContainer_programa svg {
         width: 70%;
     }
 
-    .headerContainer_sobre  svg {
+    .headerContainer_sobre svg {
         width: 70%;
     }
 
@@ -680,7 +691,7 @@ footer div {
         width: 70%;
     }
 
-     .navBar {
+    .navBar {
         justify-content: flex-end;
         gap: calc(var(--marginDesktop) * 4);
         grid-column: 5 / span 4;
@@ -698,14 +709,18 @@ footer div {
         grid-column: 5 / span 4;
     }
 
-    .headerContainer_index .navBar{
+    .headerContainer_index .navBar {
         grid-column: 5 / span 4;
     }
 
     /*About*/
+    .aboutCarousel {
+        grid-column: 1 / span 8;
+    }
+
     .infoAbout_Container h1 {
         grid-column: 1 / span 8;
-        margin-bottom: calc(var(--marginDesktop)* 4);
+        margin-bottom: calc(var(--marginDesktop)* 2);
     }
 
     .firstInfoAbout,
@@ -715,6 +730,15 @@ footer div {
 
     .infoAbout_Team {
         grid-column: span 8;
+    }
+
+    .aboutCarousel {
+        height: 30vh;
+    }
+
+    .aboutCarousel img {
+        height: 100%;
+        width: fit-content;
     }
 
     /*Programa*/
@@ -790,9 +814,10 @@ footer div {
     }
 
     /**/
-    .gridEvents .pastEvent:first-child{
+    .gridEvents .pastEvent:first-child {
         grid-column: 1 / span 7;
     }
+
     .gridEvents.pastEvent:nth-child(odd) {
         grid-column: 1 / span 7;
     }
@@ -806,24 +831,82 @@ footer div {
         grid-column: span 7;
     }
 
-    .gridEvents.pastEvents-image img {
+    .gridEvents .pastEvents-image img {
         width: 100%;
     }
 
     /*Evento-tipo*/
-    .firstInfoAbout{
-        margin-bottom: calc(var(--marginDesktop) * 4);
+    .firstInfoAbout {
+        margin-bottom: calc(var(--marginDesktop) * 2);
     }
 
     .eventTypeInfo_container {
         grid-column: 1 / span 8;
     }
 
-    .infoAbout_Container{
-        margin-top: calc(var(--marginDesktop) * 8);
+    .infoAbout_Container {
+        margin-top: calc(var(--marginDesktop) * 4);
     }
 
-  
+    .imageEvent-secundary {
+        grid-column: 1 / span 8;
+    }
+
+    .imageEvent-secundary {
+        margin-top: calc(var(--marginDesktop) * 2);
+    }
+
+    .imageEvent-secundary_description {
+        grid-column: 1 / span 4;
+        margin-top: calc(var(--marginDesktop) * 2);
+    }
+
+    .imageArchive img.behavior1:nth-child(3n+1) {
+        grid-column: 1 / span 7;
+    }
+
+    .imageArchive img.behavior1:nth-child(3n+2) {
+        grid-column: 2 / span 7;
+    }
+
+    .imageArchive img.behavior1:nth-child(3n+3) {
+        grid-column: 1 / span 7;
+    }
+
+    .imageArchive img.behavior2:nth-child(3n+1) {
+        grid-column: 2 / span 7;
+    }
+
+    .imageArchive img.behavior2:nth-child(3n+2) {
+        grid-column: 1 / span 7;
+    }
+
+    .imageArchive img.behavior2:nth-child(3n+3) {
+        grid-column: 2 / span 7;
+    }
+
+    .imageArchive img {
+        margin-bottom: calc(var(--marginDesktop)* 4);
+    }
+
+    .imageArchiveTitle h1 {
+        grid-column: 1 / span 8;
+        margin-bottom: calc(var(--marginDesktop)* 4);
+        margin-top: calc(var(--marginDesktop)* 7);
+    }
+
+    .eventTypeInfo_container svg {
+        width: 25%;
+    }
+
+    .eventTypeImage_container {
+        margin-bottom: calc(var(--marginDesktop)* 2);
+        margin-top: 0;
+    }
+
+    .eventTypeImage_container {
+        grid-column: 1 / span 8;
+    }
 
     /*Footer*/
     footer div {

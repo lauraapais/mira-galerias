@@ -1,0 +1,102 @@
+i want to have the first image in the center of the screenm, in the left i have the last image, in the right i have the second image
+
+<div class="eventIndex-container">
+                <div class="allEventsIndex" id="slider">
+                    <div class="eventIndex">
+                        <div class="eventsIndex-image">
+                            <img src="assets/data/images/image2.jpg" alt="Image 2">
+                        </div>
+                        <div class="eventsIndex-info">
+                            <h1 class="bold">Da Paisagem ao Mapa – Capítulo I</h1>
+                            <p>Mafalda Santos</p>
+                            <p>10.09—18.06.2024</p>
+                            <p><br></p>
+                            <p>Exposição</p>
+                            <p>Rua Miraflor, nº 159</p>
+                            <p><br></p>
+                            <svg>...</svg>
+                        </div>
+                    </div>
+                    <div class="eventIndex">
+                        <div class="eventsIndex-image">
+                            <img src="assets/data/images/image1.jpg" alt="Image 1">
+                        </div>
+                        <div class="eventsIndex-info">
+                            <h1 class="bold">Da Paisagem ao Mapa – Capítulo I</h1>
+                            <p>Mafalda Santos</p>
+                            <p>10.09—18.06.2024</p>
+                            <p><br></p>
+                            <p>Exposição</p>
+                            <p>Rua Miraflor, nº 159</p>
+                            <p><br></p>
+                            <svg>...</svg>
+                        </div>
+                    </div>
+                    <div class="eventIndex">
+                        <div class="eventsIndex-image">
+                            <img src="assets/data/images/image4.jpg" alt="Image 4">
+                        </div>
+                        <div class="eventsIndex-info">
+                            <h1 class="bold">Da Paisagem ao Mapa – Capítulo I</h1>
+                            <p>Mafalda Santos</p>
+                            <p>10.09—18.06.2024</p>
+                            <p><br></p>
+                            <p>Exposição</p>
+                            <p>Rua Miraflor, nº 159</p>
+                            <p><br></p>
+                            <svg>...</svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+/*INDEX 2*/
+.imageSlider {
+    display: flex;
+    gap: calc(var(--marginDesktop) / 2);
+    justify-content: center;
+}
+
+.imageSlider img {
+    height: 60vh;
+}
+
+.headerInfoIndex {
+    margin-bottom: var(--marginDesktop);
+}
+
+.headerInfoIndex h1:first-child {
+    grid-column: 1 / span 2;
+}
+
+.eventsIndex-image {
+    width: max-content;
+    height: 55vh;
+    margin-bottom: calc(var(--marginDesktop) / 2);
+}
+
+.eventsIndex-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.allEventsIndex {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--marginDesktop) / 2);
+    overflow-x: auto;
+}
+
+.eventIndex-container {
+    overflow-x: auto;
+}
+
+.eventsIndex-info {
+    margin-bottom: calc(var(--marginDesktop) * 1.5);
+}
+
+.eventsIndex-info svg{
+    width: 6.5vw;
+}
