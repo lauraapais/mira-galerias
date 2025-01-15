@@ -1,22 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
   var sliders = document.querySelectorAll('.carousel');
 
-  sliders.forEach(function (slider) {
+  sliders.forEach(function(slider) {
     var flkty = new Flickity(slider, {
       wrapAround: true,
       imagesLoaded: true,
       freeScroll: true,
-      cellAlign: 'left',
+      cellAlign: 'center',
       contain: true,
-      cellSpacing: 10 // Adjust this value to set the spacing between images
+      cellSpacing: 10,
+      autoPlay: false
     });
 
-    var prevButton = slider.querySelector('.flickity-prev-next-button.previous');
-    var nextButton = slider.querySelector('.flickity-prev-next-button.next');
-
-    if (prevButton && nextButton) {
-      prevButton.innerHTML = '<span class="custom-prev-button">Previous</span>';
-      nextButton.innerHTML = '<span class="custom-next-button">Next</span>';
+    // Function to auto-advance the slide
+    function autoAdvance() {
+      flkty.next();
     }
+
+    // Set the interval to 5 seconds (5000 milliseconds)
+    var autoPlayInterval = setInterval(autoAdvance, 5000);
+
+    // Function to reset the interval
+    function resetAutoPlayInterval() {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(autoAdvance, 5000);
+    }
+
+    // Reset the interval when the user interacts with the slider
+    ['mouseenter', 'mouseleave', 'click', 'touchstart'].forEach(event => {
+      slider.addEventListener(event, resetAutoPlayInterval);
+    });
   });
 });
