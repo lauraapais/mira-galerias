@@ -186,17 +186,7 @@ header {
     height: 60vh;
 }
 
-.eventsIndex-image {
-    width: max-content;
-    height: 55vh;
-    margin-bottom: calc(var(--marginDesktop) / 2);
-}
 
-.eventsIndex-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .eventIndex-container {
     overflow-x: auto;
@@ -260,45 +250,42 @@ header {
 
 
 /* external css: flickity.css */
-/* external css: flickity.css */
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
-}
-
-.eventIndex {
+.carousel img {
+    height: 50vh;
     width: auto;
-    height: 60vh;
     margin-right: calc(var(--marginDesktop) / 2);
 }
 
-/* cell number */
-.eventIndex:before {
-    display: block;
-}
-
-.flickity-enabled.is-draggable .flickity-viewport {
-    height: 75vh !important;
+.flickity-prev-next-button,
+.flickity-prev-next-button:hover {
+    display: none;
 }
 
 .flickity-page-dots {
     display: none;
 }
 
+.flickity-enabled.is-draggable .flickity-viewport {
+    height: 100vh;
+}
+
+.flickity-enabled.is-draggable {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+}
+
+
 
 /* Programa */
-.futureEventInfo{
-    order:2;
+.futureEventInfo {
+    order: 2;
 }
 
-.futureEventInfo h1{
-    text-wrap:pretty;
+.futureEventInfo h1 {
+    text-wrap: pretty;
 }
+
 .futureEventContainer {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -366,7 +353,7 @@ body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: calc(var(--marginDesktop)) !important;
-    row-gap: 0.5rem!important;
+    row-gap: 0.5rem !important;
 }
 
 .indexEvents .pastEvents-info {
