@@ -227,17 +227,12 @@ header {
 }
 
 .indexArrow {
-    margin: 0 var(--marginDesktop);
     width: calc(100vw - var(--marginDesktop)* 2);
     display: flex;
     justify-content: space-between;
-}
-
-.indexArrow {
-    width: calc(100vw - var(--marginDesktop) * 2);
-    display: flex;
-    justify-content: space-between;
     overflow-x: hidden;
+    position: absolute;
+    bottom: var(--marginDesktop);
 }
 
 .indexArrow svg {

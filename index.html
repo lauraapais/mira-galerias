@@ -82,14 +82,8 @@
   </header>
 
   <main>
-    <div style="
-        position: absolute;
-        width: 100vw;
-        left: 0;
-    ">
-      <div class="eventIndex-container js-flickity" data-flickity-options='{ "wrapAround": true }'>
-        <!--1-->
-        <div class="eventIndex">
+    <div class="carousel">
+      <div class="eventIndex">
           <div class="eventsIndex-image">
             <img src="assets/data/images/image1.jpg" alt="Image 2">
           </div>
@@ -101,58 +95,56 @@
             <p>Rua Miraflor, nº 159</p>
           </div>
         </div>
-        <!--2-->
         <div class="eventIndex">
           <div class="eventsIndex-image">
             <img src="assets/data/images/image2.jpg" alt="Image 2">
           </div>
           <div class="eventsIndex-info">
-            <h1 class="bold">Enlaçar a boca às coisas</h1>
+            <h1 class="bold">Da Paisagem ao Mapa – Capítulo I</h1>
             <h1>Mafalda Santos</h1>
             <p>10.09—18.06.2024</p>
             <p class="marginTop-eventsIndex">Exposição</p>
             <p>Rua Miraflor, nº 159</p>
           </div>
         </div>
-        <!--3-->
         <div class="eventIndex">
           <div class="eventsIndex-image">
             <img src="assets/data/images/image3.jpg" alt="Image 2">
           </div>
           <div class="eventsIndex-info">
-            <h1 class="bold">geografia imaterial</h1>
-            <h1>André Sousa, Nuno Ramalho e Sérgio Leitão</h1>
+            <h1 class="bold">Da Paisagem ao Mapa – Capítulo I</h1>
+            <h1>Mafalda Santos</h1>
             <p>10.09—18.06.2024</p>
             <p class="marginTop-eventsIndex">Exposição</p>
             <p>Rua Miraflor, nº 159</p>
           </div>
         </div>
-        <!--4-->
-        <div class="eventIndex">
-          <div class="eventsIndex-image">
-            <img src="assets/data/images/image20.jpg" alt="Image 2">
-          </div>
-          <div class="eventsIndex-info">
-            <h1 class="bold">18ª ed. MIRA Mobile Prize Street Photography BW</h1>
-            <p>10.09—18.06.2024</p>
-            <p class="marginTop-eventsIndex">Exposição</p>
-            <p>Rua Miraflor, nº 159</p>
-          </div>
-        </div>
-        <!--5-->
         <div class="eventIndex">
           <div class="eventsIndex-image">
             <img src="assets/data/images/image19.jpg" alt="Image 2">
           </div>
           <div class="eventsIndex-info">
-            <h1 class="bold">Virgens e Bruxas</h1>
-            <h1>Margarida Paiva e Anaïs Lalange</h1>
+            <h1 class="bold">Da Paisagem ao Mapa – Capítulo I</h1>
+            <h1>Mafalda Santos</h1>
             <p>10.09—18.06.2024</p>
             <p class="marginTop-eventsIndex">Exposição</p>
             <p>Rua Miraflor, nº 159</p>
           </div>
         </div>
-      </div>
+        <div class="eventIndex">
+          <div class="eventsIndex-image">
+            <img src="assets/data/images/image20.jpg" alt="Image 2">
+          </div>
+          <div class="eventsIndex-info">
+            <h1 class="bold">Da Paisagem ao Mapa – Capítulo I</h1>
+            <h1>Mafalda Santos</h1>
+            <p>10.09—18.06.2024</p>
+            <p class="marginTop-eventsIndex">Exposição</p>
+            <p>Rua Miraflor, nº 159</p>
+          </div>
+        </div>
+
+  </div>
       <div class="indexArrow">
         <svg id="indexArrow_Left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.6 450.56">
           <polyline class="cls-1" points="197.08 2.56 5.18 225.28 197.08 448" />
@@ -163,7 +155,6 @@
           <line class="cls-1" x1="507.43" y1="225.28" y2="225.28" />
         </svg>
       </div>
-    </div>
   </main>
 
 
@@ -184,26 +175,8 @@
       <h1>Subscrever Newsletter</p>
     </div>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var flkty = new Flickity('.eventIndex-container', {
-        wrapAround: true,
-        prevNextButtons: false, // Disable Flickity's default buttons
-      });
-
-      // Custom Previous Button
-      document.getElementById('indexArrow_Left').addEventListener('click', function () {
-        flkty.previous();
-      });
-
-      // Custom Next Button
-      document.getElementById('indexArrow_Right').addEventListener('click', function () {
-        flkty.next();
-      });
-    });
-
-  </script>
-  <script src="assets/js/index.js"></script>
+  
+  <script src="assets/js/index_3.js"></script>
   <script src="assets/js/flickity.pkgp.min.js"></script>
 </body>
 
