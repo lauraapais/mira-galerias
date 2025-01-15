@@ -919,6 +919,7 @@ footer div {
 
     /*Evento-tipo*/
     .eventTypeInfo_container{
+        order:2;
         margin-bottom: var(--marginDesktop);
     }
     .firstInfoAbout {
