@@ -2,12 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var sliders = document.querySelectorAll('.carousel');
 
   sliders.forEach(function(slider) {
+
+
     var flkty = new Flickity(slider, {
       wrapAround: true,
       imagesLoaded: true,
       freeScroll: true,
       cellAlign: 'center',
-      contain: true,
+      contain: false,
       cellSpacing: 10,
       autoPlay: false
     });
@@ -22,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextButton.addEventListener('click', function() {
       flkty.next();
+      flkty.resize();
+
     });
   });
 });

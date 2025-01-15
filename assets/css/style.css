@@ -235,6 +235,7 @@ header {
     bottom: var(--marginDesktop);
 }
 
+
 .indexArrow svg {
     width: 2vw;
     fill: none;
@@ -270,6 +271,15 @@ header {
     left: 0;
 }
 
+.carousel {
+    margin: 0 auto;
+    display: block;
+  }
+  .flickity-viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  
 
 
 /* Programa */
@@ -766,6 +776,13 @@ footer div {
 
     #indexArrow_Right {
         display: none !important;
+    }
+
+    .carousel img {
+        height: 50vh;
+        width: calc(100vw - var(--marginDesktop)* 6);
+        object-fit: cover;
+        margin-right: calc(var(--marginDesktop) / 2);
     }
 
     /*
