@@ -775,6 +775,10 @@ footer div {
         stroke-width: 7.84px;
     }
 
+    .flickity-enabled.is-draggable .flickity-viewport {
+        height: 80vh !important;
+    }
+
     /*About*/
     .aboutCarousel {
         grid-column: 1 / span 8;
