@@ -698,7 +698,7 @@ footer div {
 
     main {
         margin-top: calc(var(--marginDesktop)* 6);
-        min-height: 75vh;
+        min-height: 80vh;
     }
 
     /*Header*/
