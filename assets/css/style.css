@@ -292,6 +292,13 @@ body {
 
 
 /* Programa */
+.futureEventInfo{
+    order:2;
+}
+
+.futureEventInfo h1{
+    text-wrap:pretty;
+}
 .futureEventContainer {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
