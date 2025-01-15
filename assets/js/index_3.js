@@ -1,31 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var sliders = document.querySelectorAll('.carousel');
+document.addEventListener("DOMContentLoaded", function () {
+  var sliders = document.querySelector(".carousel");
 
-  sliders.forEach(function(slider) {
+  var flkty = new Flickity(sliders, {
+    wrapAround: true,
+    imagesLoaded: true,
+    freeScroll: true,
+    cellAlign: "center",
+    contain: false,
+    cellSpacing: 10,
+    autoPlay: 5000,
+    pauseAutoPlayOnHover: false
+  });
 
+  var prevButton = document.getElementById("indexArrow_Left");
+  var nextButton = document.getElementById("indexArrow_Right");
 
-    var flkty = new Flickity(slider, {
-      wrapAround: true,
-      imagesLoaded: true,
-      freeScroll: true,
-      cellAlign: 'center',
-      contain: false,
-      cellSpacing: 10,
-      autoPlay: false
-    });
+  prevButton.addEventListener("click", function () {
+    flkty.previous();
+  });
 
-    // Add event listeners to your custom arrow buttons
-    var prevButton = document.getElementById('indexArrow_Left');
-    var nextButton = document.getElementById('indexArrow_Right');
-
-    prevButton.addEventListener('click', function() {
-      flkty.previous();
-    });
-
-    nextButton.addEventListener('click', function() {
-      flkty.next();
-      flkty.resize();
-
-    });
+  nextButton.addEventListener("click", function () {
+    flkty.next();
   });
 });
