@@ -17,6 +17,8 @@
     font-style: normal;
 }
 
+
+
 body {
     margin: var(--marginDesktop);
     overflow-x: hidden;
@@ -26,7 +28,7 @@ body {
 
 .bold {
     font-family: "soleil", sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -38,6 +40,7 @@ h1 {
     font-family: "soleil", sans-serif;
     font-weight: 500;
     font-style: normal;
+    letter-spacing: 0.5px;
 }
 
 p {
@@ -88,7 +91,7 @@ main {
 }
 
 .headerLogo svg {
-    width: 36%;
+    width: 39%;
     fill: var(--red);
 }
 
@@ -213,13 +216,18 @@ header {
     transition: transform 0.5s ease;
 }
 
+.marginTop-eventsIndex {
+    margin-top: 1rem;
+}
 
 .eventsIndex-info {
     margin-bottom: calc(var(--marginDesktop) * 1.5);
 }
 
-.eventsIndex-info svg {
-    width: 6.5vw;
+
+
+.svgInfo {
+    width: 6vw;
     fill: var(--black);
 }
 
@@ -257,28 +265,28 @@ header {
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-  }
+}
 
-  .eventIndex {
+body {
+    font-family: sans-serif;
+}
+
+.eventIndex {
     width: auto;
     height: 60vh;
     margin-right: calc(var(--marginDesktop) / 2);
-  }
-  
-  /* cell number */
-  .eventIndex:before {
+}
+
+/* cell number */
+.eventIndex:before {
     display: block;
-  }
-  
-  .flickity-enabled.is-draggable .flickity-viewport {
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
     height: 75vh !important;
 }
 
-.flickity-page-dots{
+.flickity-page-dots {
     display: none;
 }
 
@@ -293,7 +301,7 @@ header {
 .futureEvent {
     display: flex;
     flex-direction: column;
-    gap: var(--marginDesktop);
+    gap: 1rem;
     grid-column: span 2;
     cursor: pointer;
 }
@@ -306,7 +314,7 @@ header {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: calc(var(--marginDesktop));
-    margin-top: calc(var(--marginDesktop) * 4);
+    margin-top: calc(var(--marginDesktop) * 3);
 }
 
 .pastEvents-header {
@@ -332,7 +340,7 @@ header {
 }
 
 .content-wrapper {
-    margin-top: var(--marginDesktop);
+    margin-top: 1rem;
 }
 
 /*indexEvents*/
@@ -351,7 +359,7 @@ header {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: calc(var(--marginDesktop)) !important;
-    row-gap: calc(var(--marginDesktop) / 4) !important;
+    row-gap: 0.5rem!important;
 }
 
 .indexEvents .pastEvents-info {
@@ -524,9 +532,7 @@ header {
     grid-column: 3 / span 2;
 }
 
-.eventTypeInfo_container svg {
-    width: 6.5vw;
-}
+
 
 .eventTypeImage_container {
     grid-column: 5 / span 4;
@@ -765,12 +771,14 @@ footer div {
         display: none !important;
     }
 
-    #indexArrow_Left{
+    #indexArrow_Left {
         display: none !important;
     }
-    #indexArrow_Right{
+
+    #indexArrow_Right {
         display: none !important;
     }
+
     /*
     .indexArrow {
         width: calc(100vw - var(--marginDesktop)* 2);
@@ -790,7 +798,7 @@ footer div {
     }*/
 
     .eventIndex {
-        margin-right: calc(var(--marginDesktop) );
+        margin-right: calc(var(--marginDesktop));
     }
 
 
@@ -918,10 +926,11 @@ footer div {
     }
 
     /*Evento-tipo*/
-    .eventTypeInfo_container{
-        order:2;
+    .eventTypeInfo_container {
+        order: 2;
         margin-bottom: var(--marginDesktop);
     }
+
     .firstInfoAbout {
         margin-bottom: calc(var(--marginDesktop) * 2);
     }
