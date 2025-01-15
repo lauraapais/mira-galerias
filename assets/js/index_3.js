@@ -12,23 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
       autoPlay: false
     });
 
-    // Function to auto-advance the slide
-    function autoAdvance() {
+    // Add event listeners to your custom arrow buttons
+    var prevButton = document.getElementById('indexArrow_Left');
+    var nextButton = document.getElementById('indexArrow_Right');
+
+    prevButton.addEventListener('click', function() {
+      flkty.previous();
+    });
+
+    nextButton.addEventListener('click', function() {
       flkty.next();
-    }
-
-    // Set the interval to 5 seconds (5000 milliseconds)
-    var autoPlayInterval = setInterval(autoAdvance, 5000);
-
-    // Function to reset the interval
-    function resetAutoPlayInterval() {
-      clearInterval(autoPlayInterval);
-      autoPlayInterval = setInterval(autoAdvance, 5000);
-    }
-
-    // Reset the interval when the user interacts with the slider
-    ['mouseenter', 'mouseleave', 'click', 'touchstart'].forEach(event => {
-      slider.addEventListener(event, resetAutoPlayInterval);
     });
   });
 });
