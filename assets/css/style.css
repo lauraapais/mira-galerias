@@ -825,7 +825,6 @@ footer div {
 
   .futureEvent {
     grid-column: span 8;
-    flex-direction: column-reverse;
   }
 
   .futureEventContainer {
