@@ -815,9 +815,10 @@ footer div {
 
   /*Programa*/
   
-  .mainProgram{
-    margin: calc(var(--marginDesktop) * 2);
-  }
+  .mainProgram {
+    margin: calc(var(--marginDesktop)* 6) calc(var(--marginDesktop)* 2);
+}
+
   .futureEvent:first-child {
     display: none;
   }
