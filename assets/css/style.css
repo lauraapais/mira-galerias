@@ -627,6 +627,10 @@ header {
   display: block;
 }
 
+.eventsIndex-info{
+  margin-top: 1rem;
+}
+
 
 /* Footer */
 footer {
