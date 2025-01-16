@@ -669,6 +669,14 @@ footer div {
     min-height: 80vh;
   }
 
+  .svgInfo{
+    width: 25vw;
+  }
+
+  .mobileNone{
+    display: none;
+  }
+
   /*Header*/
   header{
     margin: calc(var(--marginDesktop) * 2);
@@ -806,6 +814,7 @@ footer div {
   }
 
   /*Programa*/
+  
   .mainProgram{
     margin: calc(var(--marginDesktop) * 2);
   }
