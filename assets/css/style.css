@@ -615,12 +615,10 @@ header {
   justify-content: center;
 }
 
-/* Disable pointer events for child elements inside the link */
 .eventLink > * {
   pointer-events: none;
 }
 
-/* Optional: Style the link to remove default link appearance */
 .eventLink {
   text-decoration: none;
   color: inherit;
