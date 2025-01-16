@@ -739,7 +739,8 @@ footer div {
 
   .indexArrow{
     width: calc(100vw - var(--marginDesktop) * 4);
-    margin: calc(var(--marginDesktop) * 2);
+    margin: calc(var(--marginDesktop) * 4) calc(var(--marginDesktop) * 2);
+    position: initial;
   }
   .indexArrow svg {
     width: 6vw;
