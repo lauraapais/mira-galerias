@@ -841,11 +841,6 @@ footer div {
 
   .pastEventsContainer_index .pastEvent {
     flex-direction: column;
-    margin-bottom: calc(var(--marginDesktop) * 2);
-  }
-
-  .pastEventsContainer_index .pastEvent {
-    margin-bottom: calc(var(--marginDesktop) * 2);
   }
 
   .pastEvents-header {
