@@ -217,7 +217,8 @@ header {
   justify-content: space-between;
   overflow-x: hidden;
   position: absolute;
-  bottom: var(--marginDesktop);
+  bottom: 0;
+  margin: var(--marginDesktop);
 }
 
 .indexArrow svg {
@@ -258,6 +259,9 @@ header {
 }
 
 /* Programa */
+.mainProgram{
+  margin: var(--marginDesktop);
+}
 .futureEventInfo {
   order: 2;
 }
