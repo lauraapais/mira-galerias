@@ -632,10 +632,6 @@ footer div {
 }
 
 @media only screen and (max-width: 700px) {
-  body {
-    margin: calc(var(--marginDesktop) * 2);
-  }
-
   h1 {
     font-size: calc(13px + 0.390625vw);
     line-height: calc(17px + 0.390625vw);
@@ -659,6 +655,10 @@ footer div {
   }
 
   /*Header*/
+  header{
+    margin: calc(var(--marginDesktop) * 2);
+  }
+
   .headerContainer_index .headerLogo {
     grid-column: span 4;
   }
@@ -706,6 +706,10 @@ footer div {
   }
 
   /*Index*/
+  .mainIndex{
+    min-height: calc(95vh - calc(var(--marginDesktop)* 6));
+  }
+
   .eventsIndex-image {
     width: calc(100vw - var(--marginDesktop) * 6);
     height: 50vh;
@@ -718,17 +722,14 @@ footer div {
     fill: var(--black);
   }
 
-  .indexArrow {
-    display: none !important;
+  .indexArrow{
+    width: calc(100vw - var(--marginDesktop) * 4);
+    margin: calc(var(--marginDesktop) * 2);
   }
+  .indexArrow svg {
+    width: 6vw;
+}
 
-  #indexArrow_Left {
-    display: none !important;
-  }
-
-  #indexArrow_Right {
-    display: none !important;
-  }
 
   .carousel img {
     height: 50vh;
@@ -788,6 +789,9 @@ footer div {
   }
 
   /*Programa*/
+  .mainProgram{
+    margin: calc(var(--marginDesktop) * 2);
+  }
   .futureEvent:first-child {
     display: none;
   }
@@ -961,5 +965,9 @@ footer div {
   footer div {
     grid-column: span 8;
     margin-bottom: var(--marginDesktop);
+  }
+
+  footer{
+    margin: calc(var(--marginDesktop) * 2);
   }
 }
