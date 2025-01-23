@@ -248,7 +248,7 @@
 
     <div class="imageOpen">
       <div class="imageArchive-close">
-        <h1>[Fechar]</h1>
+        <h1 id="imageButton-close">[Fechar]</h1>
       </div>
       <img src="assets/data/envent-type/event-type3.png">
 
@@ -286,6 +286,26 @@
 
 
   <script src="assets/js/evento-tipo.js"></script>
+<!--
+  <script>
+    const imageArchive = document.querySelectorAll('.imageArchive img');
+    const imageOpen = document.querySelector('.imageOpen');
+    const closeButton = document.getElementById('imageButton-close');
+  
+    imageArchive.forEach(img => {
+      img.addEventListener('click', () => {
+        console.log('click');
+        const openImage = imageOpen.querySelector('img');
+        openImage.src = img.src;
+        imageOpen.style.display = 'flex';
+      });
+    });
+  
+    closeButton.addEventListener('click', () => {
+      imageOpen.style.display = 'none';
+    });
+  </script>
+  -->
 
 </body>
 
