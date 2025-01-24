@@ -1099,6 +1099,15 @@ footer div {
     height: auto;
 }
 
+
+.eventTypeImage_container {
+  height: 50vh;
+}
+
+.eventTypeImage_container img {
+  height: 50vh;
+}
+
   /*Footer*/
   footer div {
     grid-column: span 8;
