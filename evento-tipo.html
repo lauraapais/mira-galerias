@@ -89,7 +89,8 @@
         <p>Exposição</p>
         <p>Rua Miraflor, nº 159</p>
         <p><br></p>
-        <svg class="svgInfo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 109.389 30.45">
+        <svg class="svgInfo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 109.389 30.45">
           <defs>
             <clipPath id="clip-path">
               <rect id="Rectangle_23" data-name="Rectangle 23" />
@@ -215,18 +216,49 @@
       <h1>Arquivo</h1>
     </div>
     <div class="grid imageArchive">
+      <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type3.png">
+      <h1>(album) Visita guiada</h1>
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type4.png">
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type5.png">
+      <h1>(play) Conversa com os artistas</h1>
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type6.png">
+      <h1>(Fotografia) Inauguração</h1>
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type7.png">
+      <h1>(Album) Inauguração</h1>
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type8.png">
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type9.png">
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type10.png">
+    </div>
+    <div class="imageArchive-img">
       <img src="assets/data/envent-type/event-type11.png">
     </div>
-    <div>
-      <div>
+    </div>
+    <div class="grid detailsEvento">
+      <div class="folhaSalaEvento">
+        <h1>FOLHA DE SALA</h1>
+      </div>
+      <div class="financiamnetoEvento">
+        <h1>Financiamento</h1>
+        <div class="financiamnetoEvento-list">
+        <p>República Portuguesa</p>
+        <p>DGARTES</p>
+        <p>RPAC</p>
+      </div>
       </div>
     </div>
 
@@ -253,7 +285,6 @@
       <img src="assets/data/envent-type/event-type3.png">
 
     </div>
-
 
     <div class="videoOpen">
       <div class="imageArchive-close">
@@ -286,26 +317,32 @@
 
 
   <script src="assets/js/evento-tipo.js"></script>
-<!--
+  
   <script>
     const imageArchive = document.querySelectorAll('.imageArchive img');
-    const imageOpen = document.querySelector('.imageOpen');
-    const closeButton = document.getElementById('imageButton-close');
-  
-    imageArchive.forEach(img => {
-      img.addEventListener('click', () => {
-        console.log('click');
-        const openImage = imageOpen.querySelector('img');
-        openImage.src = img.src;
-        imageOpen.style.display = 'flex';
-      });
-    });
-  
-    closeButton.addEventListener('click', () => {
-      imageOpen.style.display = 'none';
-    });
+const imageOpen = document.querySelector('.imageOpen');
+const closeButton = document.getElementById('imageButton-close');
+
+imageArchive.forEach(img => {
+  img.addEventListener('click', () => {
+    console.log('click');
+    imageOpen.style.opacity = '1';
+    imageOpen.style.visibility = 'visible';
+    document.body.classList.add('no-scroll');
+  });
+});
+
+closeButton.addEventListener('click', () => {
+  imageOpen.style.opacity = '0';
+  setTimeout(() => {
+    imageOpen.style.visibility = 'hidden';
+    document.body.classList.remove('no-scroll');
+  }, 500); // Duration should match the CSS transition
+});
+
+
   </script>
-  -->
+  
 
 </body>
 
