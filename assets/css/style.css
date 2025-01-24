@@ -424,7 +424,19 @@ header {
   gap: calc(var(--marginDesktop) / 2);
   transition: transform 0.5s ease-in-out;
   height: 70vh;
+  overflow: auto;
 }
+
+/* For WebKit browsers */
+.aboutCarousel::-webkit-scrollbar {
+  display: none; /* hides the scrollbar */
+}
+
+/* For Firefox */
+.aboutCarousel {
+  scrollbar-width: none; /* hides the scrollbar */
+}
+
 
 .aboutCarousel img {
   height: 100%;
