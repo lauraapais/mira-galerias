@@ -227,7 +227,7 @@ header {
 }
 
 .indexArrow svg {
-  width: 2vw;
+  width: 1.7vw;
   fill: none;
   stroke: #000;
   stroke-miterlimit: 10;
@@ -491,27 +491,67 @@ header {
   grid-column: span 2;
 }
 
-.eventType_container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  column-gap: calc(var(--marginDesktop));
-  margin-top: calc(var(--marginDesktop) * 2);
-}
 
-.eventTypeInfo_container {
-  grid-column: 3 / span 2;
-}
+    .eventType_container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: calc(var(--marginDesktop));
+      margin-top: calc(var(--marginDesktop) * 2);
+    }
 
-.eventTypeImage_container {
-  grid-column: 5 / span 4;
-}
+    .eventTypeInfo_container {
+      grid-column: 3 / span 2;
+    }
 
-.eventTypeImage_container img {
-  width: 100%;
-}
+    .eventTypeImage_container {
+      grid-column: 5 / span 4;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      gap: calc(var(--marginDesktop) / 2);
+      height: 78vh;
+    }
+
+    .eventTypeImage_container img {
+      display: none; /* Hide all images initially */
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 78vh;
+      object-fit: cover;
+    }
+
+    .eventTypeImage_container img.active {
+      display: block; /* Show only the active image */
+    }
+
+    .eventTypeImage_container img:first-child {
+      object-fit: cover;
+    }
+
+    .eventTypeImage_Button {
+      margin: 1rem 0;
+      grid-column: 5 / span 4;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .eventTypeImage_Button h1 {
+      cursor: pointer;
+    }
 
 .eventTypeInfo {
   grid-column: span 2;
+}
+
+#eventTypeImage_Back{
+  visibility: hidden;
+}
+
+#eventTypeImage_Back, #eventTypeImage_Next{
+  cursor:pointer;
 }
 
 .imageEvent-secundary_container {
@@ -1034,7 +1074,6 @@ footer div {
   }
 
   .eventTypeImage_container {
-    margin-bottom: calc(var(--marginDesktop) * 2);
     margin-top: 0;
   }
 

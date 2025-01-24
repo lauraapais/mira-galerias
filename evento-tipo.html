@@ -148,6 +148,12 @@
       </div>
       <div class="eventTypeImage_container">
         <img src="assets/data/envent-type/event-type1.jpg">
+        <img src="assets/data/envent-type/event-type6.png">
+        <img src="assets/data/envent-type/event-type2.jpg">
+      </div>
+      <div class="eventTypeImage_Button">
+        <h1 id="eventTypeImage_Back">Anterior</h1>
+        <h1 id="eventTypeImage_Next">Próximo</h1>
       </div>
     </div>
 
@@ -217,36 +223,36 @@
     </div>
     <div class="grid imageArchive">
       <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type3.png">
-      <h1>(album) Visita guiada</h1>
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type4.png">
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type5.png">
-      <h1>(play) Conversa com os artistas</h1>
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type6.png">
-      <h1>(Fotografia) Inauguração</h1>
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type7.png">
-      <h1>(Album) Inauguração</h1>
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type8.png">
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type9.png">
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type10.png">
-    </div>
-    <div class="imageArchive-img">
-      <img src="assets/data/envent-type/event-type11.png">
-    </div>
+        <img src="assets/data/envent-type/event-type3.png">
+        <h1>(album) Visita guiada</h1>
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type4.png">
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type5.png">
+        <h1>(play) Conversa com os artistas</h1>
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type6.png">
+        <h1>(Fotografia) Inauguração</h1>
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type7.png">
+        <h1>(Album) Inauguração</h1>
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type8.png">
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type9.png">
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type10.png">
+      </div>
+      <div class="imageArchive-img">
+        <img src="assets/data/envent-type/event-type11.png">
+      </div>
     </div>
     <div class="grid detailsEvento">
       <div class="folhaSalaEvento">
@@ -255,10 +261,10 @@
       <div class="financiamnetoEvento">
         <h1>Financiamento</h1>
         <div class="financiamnetoEvento-list">
-        <p>República Portuguesa</p>
-        <p>DGARTES</p>
-        <p>RPAC</p>
-      </div>
+          <p>República Portuguesa</p>
+          <p>DGARTES</p>
+          <p>RPAC</p>
+        </div>
       </div>
     </div>
 
@@ -317,33 +323,57 @@
 
 
   <script src="assets/js/evento-tipo.js"></script>
-  
+
   <script>
     const imageArchive = document.querySelectorAll('.imageArchive img');
-const imageOpen = document.querySelector('.imageOpen');
-const closeButton = document.getElementById('imageButton-close');
+    const imageOpen = document.querySelector('.imageOpen');
+    const closeButton = document.getElementById('imageButton-close');
 
-imageArchive.forEach(img => {
-  img.addEventListener('click', () => {
-    console.log('click');
-    imageOpen.style.opacity = '1';
-    imageOpen.style.visibility = 'visible';
-    document.body.classList.add('no-scroll');
-  });
-});
+    imageArchive.forEach(img => {
+      img.addEventListener('click', () => {
+        console.log('click');
+        imageOpen.style.opacity = '1';
+        imageOpen.style.visibility = 'visible';
+        document.body.classList.add('no-scroll');
+      });
+    });
 
-closeButton.addEventListener('click', () => {
-  imageOpen.style.opacity = '0';
-  setTimeout(() => {
-    imageOpen.style.visibility = 'hidden';
-    document.body.classList.remove('no-scroll');
-  }, 500); // Duration should match the CSS transition
-});
-
-
+    closeButton.addEventListener('click', () => {
+      imageOpen.style.opacity = '0';
+      setTimeout(() => {
+        imageOpen.style.visibility = 'hidden';
+        document.body.classList.remove('no-scroll');
+      }, 500); // Duration should match the CSS transition
+    });
   </script>
-  
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll(".eventTypeImage_container img");
+    const nextButton = document.getElementById("eventTypeImage_Next");
+    const prevButton = document.getElementById("eventTypeImage_Back");
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    nextButton.addEventListener("click", function () {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+    });
+
+    prevButton.addEventListener("click", function () {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      showImage(currentImageIndex);
+    });
+
+    // Show the first image initially
+    showImage(currentImageIndex);
+  });
+</script>
 </body>
 
 </html>
